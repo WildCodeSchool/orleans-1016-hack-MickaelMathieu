@@ -4,18 +4,27 @@ body {
 }
 
 .meteo {
-    text-align: center;
-    margin-top: 15%;
+    margin-top: 10px;
     font-family: 'Indie Flower', cursive;
     font-size: 200%;
     font-weight: bold;
 }
 
 .music {
-    text-align: center;
-    margin-top: 5%;
+    margin-top: 10px;
 }
-
+.tuile{
+    height: 300px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.2);
+}
+.requestDate{
+    margin-right: 20px;
+    margin-top: 50px;
+    font-size: 60%;
+    float:right;
+    /*position: bottom;*/
+}
 .bgvid {
     position: fixed;
     top: 50%;
@@ -25,6 +34,9 @@ body {
     width: auto;
     height: auto;
     z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
     opacity: 0.6;
 }
