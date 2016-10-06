@@ -28,7 +28,7 @@
 	</video>
 		<div class="container-fluid formulaire">
 			<div class="row">
-				<div class="col-xs-12 ">
+				<div class="col-xs-12">
 					<form method="POST" action="page.php">
 						<label class="titleSearch" for="search">WeatherMood Search!</label><br/>
 						<input class="form-control" type="text" name="search" id="search" placeholder="Entrez une ville"></input>
