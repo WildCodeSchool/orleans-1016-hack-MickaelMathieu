@@ -24,40 +24,32 @@
 <body>
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-lg-6 meteo">
-				<?php
-					if (isset($_POST['submit'])){
-						if (empty($_POST['search'])){
-							echo '<br/> Vous n\'avez pas entré le nom d\'une ville dans le champ';
-						} else {
-					$post = trim(htmlentities(str_replace(' ', '',ucfirst($_POST['search']))));
-					//Decode json for id cities
-					/*$jsonIds = file_get_contents("city_list.json");
-					$ids = json_decode($jsonIds,true);
-					//var_dump($ids);
-					//Find the city id to use in http request
-					//if (in_array($post, $ids)){
-					//	echo 'true';
-					//}else{
-					//	echo 'false';
-					//}*/
-					//Send http request to openweathermap
-					$jsonMeteo = file_get_contents('http://api.openweathermap.org/data/2.5/forecast/city?q='.$post.'&APPID=244bbac7d5d04ef80d28de1271d7cf1a&units=metric&lang=fr');
-					$meteo = json_decode($jsonMeteo,true);
-					//var_dump($meteo);
-					//Answer from openweathermap
-						echo 'Bienvenu à '. $meteo['city']['name'].'<br/>';
-						echo
-							'Nous sommes le '. Date('d-m-Y') .' et il est '. Date('H:i:s').'<br/>'.
-							'Vitesse du vent : '.$meteo['list'][0]['weather'][0]['id'].'<br/>'.
-							'Orientation du vent : '.$meteo['list'][0]['wind']['deg'].'<br/>'.
-							'Conditions : '.$meteo['list'][0]['weather'][0]['main'].'<br/>'.
-							'Température : ' .$meteo['list'][0]['main']['temp'].'<br/>'.
-							'<img src=http://openweathermap.org/img/w/'.$meteo['list'][0]['weather'][0]['icon'].'.png>';
-					}
-				?>
-
+			<div class="col-xs-12 col-lg-offset-3 col-lg-6">
+				<div class="meteo text-center">
+					<?php
+						if (isset($_POST['submit'])){
+							if (empty($_POST['search'])){
+								echo '<br/> Vous n\'avez pas entré le nom d\'une ville dans le champ';
+							} else {
+								$post = trim(htmlentities(str_replace(' ', '',ucfirst($_POST['search']))));
+								//Send http request to openweathermap
+								$jsonMeteo = file_get_contents('http://api.openweathermap.org/data/2.5/forecast/city?q='.$post.'&APPID=244bbac7d5d04ef80d28de1271d7cf1a&units=metric&lang=fr');
+								$meteo = json_decode($jsonMeteo,true);
+								//var_dump($meteo);
+								//Answer from openweathermap
+								echo '<div class="tuile">
+									Bienvenu à '.$meteo['city']['name'].' '.$meteo['city']['country'].'<br/>'.
+									'Nous sommes le '. Date('d-m-Y') .' <br/>'.
+									'Les conditions actuelles sont : '.$meteo['list'][0]['weather'][0]['main'].' <img src=http://openweathermap.org/img/w/'.$meteo['list'][0]['weather'][0]['icon'].'.png>'.'<br/>'.
+									'La température est de : ' .$meteo['list'][0]['main']['temp'].' °C <br/>'.
+									'Vitesse du vent : '.$meteo['list'][0]['wind']['speed'].' km/h <br/>'.
+									'<span class="requestDate">'.Date('H').'h '.Date('i').'m '.Date('s').'s</span></div>';
+							}
+						}
+					?>
+				</div>
 			</div>
+<<<<<<< HEAD
 
 
 			<div class="col-lg-6 music">
@@ -103,6 +95,49 @@
 					$idCloud[600 to 655]=>'playlistNuage');*/
 	}
 		?>
+		</div>
+		<div class="row">
+			<div class=" col-xs-12 col-lg-offset-3 col-lg-6">
+				<div class="music text-center">
+					<?php
+						if ($meteo['list'][0]['weather'][0]['main'] == 'Clear'){
+							echo '<iframe  scrolling="no" allowTransparency="true" src="http://www.deezer.com/plugins/player?format=square&autoplay=true&playlist=true&width=500&height=500&color=007FEB&layout=dark&size=big&type=playlist&id=2297949342&app_id=1" width="500" height="500"></iframe>'
+								.'<video class="bgvid" playsinline autoplay muted loop>
+										<source src="image/clear.mp4" type="video/mp4">
+								</video>';
+						} else if ($meteo['list'][0]['weather'][0]['main'] == 'Rain'){
+							echo '<iframe  scrolling="no" allowTransparency="true" src="http://www.deezer.com/plugins/player?format=square&autoplay=true&playlist=true&width=500&height=500&color=007FEB&layout=dark&size=big&type=playlist&id=2297967262&app_id=1" width="500" height="500"></iframe>'
+								.'<video class="bgvid" playsinline autoplay muted loop>
+										<source src="image/rain.mp4" type="video/mp4">
+								</video>';
+						} else if ($meteo['list'][0]['weather'][0]['main'] == 'Snow'){
+							echo '<iframe  scrolling="no" allowTransparency="true" src="http://www.deezer.com/plugins/player?format=square&autoplay=true&playlist=true&width=500&height=500&color=007FEB&layout=dark&size=big&type=playlist&id=2298172422&app_id=1" width="500" height="500"></iframe>'
+								.'<video class="bgvid" playsinline autoplay muted loop>
+										<source src="image/snow.mp4" type="video/mp4">
+								</video>';
+						} else if ($meteo['list'][0]['weather'][0]['main'] == 'Clouds'){
+							echo '<iframe scrolling="no" allowTransparency="true" src="http://www.deezer.com/plugins/player?format=square&autoplay=true&playlist=true&width=500&height=500&color=007FEB&layout=dark&size=big&type=playlist&id=2298208042&app_id=1" width="500" height="500"></iframe>'
+								.'<video class="bgvid" playsinline autoplay muted loop>
+										<source src="image/clouds.mp4" type="video/mp4">
+								</video>';
+						}else if ($meteo['list'][0]['weather'][0]['main'] == 'Thunderstorm'){
+							echo '<iframe scrolling="no" allowTransparency="true" src="http://www.deezer.com/plugins/player?format=square&autoplay=true&playlist=true&width=500&height=500&color=007FEB&layout=dark&size=big&type=playlist&id=2298208042&app_id=1" width="500" height="500"></iframe>'
+								.'<video class="bgvid" playsinline autoplay muted loop>
+										<source src="image/thunderstorm.mp4" type="video/mp4">
+								</video>';
+						} else if ($meteo['list'][0]['weather'][0]['main'] == 'Drizzle') {
+							echo '<iframe  scrolling="no" allowTransparency="true" src="http://www.deezer.com/plugins/player?format=square&autoplay=true&playlist=true&width=500&height=500&color=007FEB&layout=dark&size=big&type=playlist&id=2297967262&app_id=1" width="500" height="500"></iframe>'
+								. '<video class="bgvid" playsinline autoplay muted loop>
+										<source src="image/rain.mp4" type="video/mp4">
+								</video>';
+						} else if ($meteo['list'][0]['weather'][0]['main'] == 'Atmosphere') {
+							echo '<iframe  scrolling="no" allowTransparency="true" src="http://www.deezer.com/plugins/player?format=square&autoplay=true&playlist=true&width=500&height=500&color=007FEB&layout=dark&size=big&type=playlist&id=2297967262&app_id=1" width="500" height="500"></iframe>'
+								. '<video class="bgvid" playsinline autoplay muted loop>
+										<source src="image/atmosphere.mp4" type="video/mp4">
+								</video>';
+						}
+					?>
+				</div>
 			</div>
 		</div>
 	</div>
