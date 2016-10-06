@@ -83,7 +83,7 @@
 								<source src="image/clouds.mp4" type="video/mp4">
 						</video>';
 				}else if ($meteo['list'][0]['weather'][0]['main'] == 'Thunderstorm'){
-					echo '<iframe scrolling="no" allowTransparency="true" src="http://www.deezer.com/plugins/player?format=square&autoplay=true&playlist=true&width=500&height=500&color=007FEB&layout=dark&size=big&type=playlist&id=2298208042&app_id=1" width="500" height="500"></iframe>'
+					echo '<iframe scrolling="no" allowTransparency="true" src="http://www.deezer.com/plugins/player?format=square&autoplay=true&playlist=true&width=500&height=500&color=007FEB&layout=dark&size=big&type=playlist&id=2299545462&app_id=1" width="500" height="500"></iframe>'
 						.'<video class="bgvid" playsinline autoplay muted loop>
 								<source src="image/thunderstorm.mp4" type="video/mp4">
 						</video>';
@@ -93,7 +93,7 @@
 								<source src="image/rain.mp4" type="video/mp4">
 						</video>';
 				} else if ($meteo['list'][0]['weather'][0]['main'] == 'Atmosphere') {
-					echo '<iframe  scrolling="no" allowTransparency="true" src="http://www.deezer.com/plugins/player?format=square&autoplay=true&playlist=true&width=500&height=500&color=007FEB&layout=dark&size=big&type=playlist&id=2297967262&app_id=1" width="500" height="500"></iframe>'
+					echo '<iframe  scrolling="no" allowTransparency="true" src="http://www.deezer.com/plugins/player?format=square&autoplay=true&playlist=true&width=500&height=500&color=007FEB&layout=dark&size=big&type=playlist&id=2299550442&app_id=1" width="500" height="500"></iframe>'
 						. '<video class="bgvid" playsinline autoplay muted loop>
 								<source src="image/atmosphere.mp4" type="video/mp4">
 						</video>';
