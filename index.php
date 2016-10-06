@@ -17,6 +17,9 @@
 		<!-- CSS PERSO-->
 		<link rel="stylesheet" href="css/index.css">
 
+		<!-- FONT PERSO -->
+		<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+
 	</head>
 	<body>
 	<video class="bgvid" playsinline autoplay muted loop>

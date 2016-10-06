@@ -4,22 +4,23 @@ body{
     background-size: cover;
     color: #0f0f0f;
     background-color: #0f0f0f;
+    font-family: 'Indie Flower', cursive;
 }
 .formulaire {
     position: absolute;
-    left: 35vw;
-    top: 45vh;
+    left: 22vw;
+    top: 40vh;
     text-align: center;
 }
 
 .bgvid {
     width: 100%;
     height: 100%;
-    opacity: 0.6;
+    opacity: 0.5;
 }
 
 .titleSearch {
-    font-size: 250%;
+    font-size: 500%;
 }
 .btn {
     margin-top: 5%;
