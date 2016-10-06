@@ -35,9 +35,9 @@
 		</script>
 	</head>
 	<body>
-		<div class="container-fluid text-center">
+		<div class="container-fluid text-center formulaire">
 			<div class="row">
-				<div class="col-xs-12 col-lg-offset-3 col-lg-6 formulaire">
+				<div class="col-xs-12 col-lg-offset-3 col-lg-6">
 					<video class="bgvid" playsinline autoplay muted loop poster="image/ciel.jpeg">
 						<source src="image/sky.mp4" type="video/mp4">
 					</video>

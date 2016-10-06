@@ -16,6 +16,10 @@
 
 		<!-- CSS PERSO-->
 		<link rel="stylesheet" href="css/page.css">
+
+		<!-- FONT PERSO -->
+		<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+
 </head>
 <body>
 	<div class="container-fluid">
@@ -59,19 +63,41 @@
 			<div class="col-lg-6 music">
 			<?php
 				if ($meteo['list'][0]['weather'][0]['main'] == 'Clear'){
-					echo 'il fait beau à '.$meteo['city']['name'].'<br/>'.
-					'<iframe  scrolling="no" allowTransparency="true" src="http://www.deezer.com/plugins/player?format=square&autoplay=true&playlist=true&width=500&height=500&color=007FEB&layout=dark&size=big&type=playlist&id=2297949342&app_id=1" width="500" height="500"></iframe>';
+					echo '<iframe  scrolling="no" allowTransparency="true" src="http://www.deezer.com/plugins/player?format=square&autoplay=true&playlist=true&width=500&height=500&color=007FEB&layout=dark&size=big&type=playlist&id=2297949342&app_id=1" width="500" height="500"></iframe>'
+						.'<video class="bgvid" playsinline autoplay muted loop>
+								<source src="image/clear.mp4" type="video/mp4">
+						</video>';
 				} else if ($meteo['list'][0]['weather'][0]['main'] == 'Rain'){
-					echo 'il pleut à '.$meteo['city']['name'].'<br/>'.
-					'<iframe  scrolling="no" allowTransparency="true" src="http://www.deezer.com/plugins/player?format=square&autoplay=true&playlist=true&width=500&height=500&color=007FEB&layout=dark&size=big&type=playlist&id=2297967262&app_id=1" width="500" height="500"></iframe>';
+					echo '<iframe  scrolling="no" allowTransparency="true" src="http://www.deezer.com/plugins/player?format=square&autoplay=true&playlist=true&width=500&height=500&color=007FEB&layout=dark&size=big&type=playlist&id=2297967262&app_id=1" width="500" height="500"></iframe>'
+						.'<video class="bgvid" playsinline autoplay muted loop>
+								<source src="image/rain.mp4" type="video/mp4">
+						</video>';
 				} else if ($meteo['list'][0]['weather'][0]['main'] == 'Snow'){
-					echo 'il neige à '.$meteo['city']['name'].'<br/>'.
-					'<iframe  scrolling="no" allowTransparency="true" src="http://www.deezer.com/plugins/player?format=square&autoplay=true&playlist=true&width=500&height=500&color=007FEB&layout=dark&size=big&type=playlist&id=2298172422&app_id=1" width="500" height="500"></iframe>';
+					echo '<iframe  scrolling="no" allowTransparency="true" src="http://www.deezer.com/plugins/player?format=square&autoplay=true&playlist=true&width=500&height=500&color=007FEB&layout=dark&size=big&type=playlist&id=2298172422&app_id=1" width="500" height="500"></iframe>'
+						.'<video class="bgvid" playsinline autoplay muted loop>
+								<source src="image/snow.mp4" type="video/mp4">
+						</video>';
 				} else if ($meteo['list'][0]['weather'][0]['main'] == 'Clouds'){
-					echo 'il y a des nuages à '.$meteo['city']['name'].'<br/>'.
-					'<iframe scrolling="no" allowTransparency="true" src="http://www.deezer.com/plugins/player?format=square&autoplay=true&playlist=true&width=500&height=500&color=007FEB&layout=dark&size=big&type=playlist&id=2298208042&app_id=1" width="500" height="500"></iframe>';
+					echo '<iframe scrolling="no" allowTransparency="true" src="http://www.deezer.com/plugins/player?format=square&autoplay=true&playlist=true&width=500&height=500&color=007FEB&layout=dark&size=big&type=playlist&id=2298208042&app_id=1" width="500" height="500"></iframe>'
+						.'<video class="bgvid" playsinline autoplay muted loop>
+								<source src="image/clouds.mp4" type="video/mp4">
+						</video>';
+				}else if ($meteo['list'][0]['weather'][0]['main'] == 'Thunderstorm'){
+					echo '<iframe scrolling="no" allowTransparency="true" src="http://www.deezer.com/plugins/player?format=square&autoplay=true&playlist=true&width=500&height=500&color=007FEB&layout=dark&size=big&type=playlist&id=2298208042&app_id=1" width="500" height="500"></iframe>'
+						.'<video class="bgvid" playsinline autoplay muted loop>
+								<source src="image/thunderstorm.mp4" type="video/mp4">
+						</video>';
+				} else if ($meteo['list'][0]['weather'][0]['main'] == 'Drizzle') {
+					echo '<iframe  scrolling="no" allowTransparency="true" src="http://www.deezer.com/plugins/player?format=square&autoplay=true&playlist=true&width=500&height=500&color=007FEB&layout=dark&size=big&type=playlist&id=2297967262&app_id=1" width="500" height="500"></iframe>'
+						. '<video class="bgvid" playsinline autoplay muted loop>
+								<source src="image/rain.mp4" type="video/mp4">
+						</video>';
+				} else if ($meteo['list'][0]['weather'][0]['main'] == 'Atmosphere') {
+					echo '<iframe  scrolling="no" allowTransparency="true" src="http://www.deezer.com/plugins/player?format=square&autoplay=true&playlist=true&width=500&height=500&color=007FEB&layout=dark&size=big&type=playlist&id=2297967262&app_id=1" width="500" height="500"></iframe>'
+						. '<video class="bgvid" playsinline autoplay muted loop>
+								<source src="image/atmosphere.mp4" type="video/mp4">
+						</video>';
 				}
-
 				/*$tab = array($idClear[800]=>'playlistBeau',
 					$idRain[500,501,502 to 531]=>'playlistPluie'),
 					$idCloud[600 to 655]=>'playlistNuage');*/
