@@ -50,12 +50,8 @@ li {
     padding-bottom: 20px;
     border-radius: 10px;
 }
-.requestDate{
-    margin-right: 20px;
-    margin-top: 10px;
-    font-size: 60%;
-    float:right;
-    /*position: bottom;*/
+.queryDate{
+    font-size: 50%;
 }
 .bgvid {
     position: fixed;

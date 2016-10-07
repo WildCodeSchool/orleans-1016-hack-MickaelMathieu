@@ -70,7 +70,7 @@
 							<?php
 							echo '<h1> Bienvenue à '.$meteo['city']['name'].' '.$meteo['city']['country'].'</h1>
 							<p> Nous sommes le '. Date('d-m-Y') .' </p>
-							<p> Il est '.Date('H').' heure et '.Date('i').' minutes </p>';
+							<p><span class="queryDate"> Dernière mise à jour à : '.Date('H').' heure et '.Date('i').' minutes </span></p>';
 							?>
 						</div>
 					</div>

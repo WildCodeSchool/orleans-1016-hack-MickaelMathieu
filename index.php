@@ -19,20 +19,6 @@
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 		<!-- BOOTSTRAPP JS -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-		<script type="text/javascript">
-			/*$(function() {
-			    //var autocompleteTags = $.parseJSON("city_list.json");
-			    //alert(autocompleteTags.name);
-			    var my_json = [];
-					$.getJSON("city_list.json", function(json) {
-					  my_json = json;
-					  // here you have the value
-					});
-			    $( "#search" ).autocomplete({
-			     	source: my_json[0][name],
-			    });
-			});*/
-		</script>
 	</head>
 	<body>
 		<div class="container-fluid text-center formulaire">
