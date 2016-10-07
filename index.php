@@ -30,7 +30,7 @@
 					<form method="POST" action="page.php">
 						<label class="titleSearch" for="search">
 							WeatherMood Search!
-							<h3>Find what you want</h3>
+							<h3>Stream your weather...</h3>
 						</label>
 						<div class="input-group">
 							<input class="form-control" type="text" name="search" id="search" placeholder="City, Country if you need">
@@ -50,6 +50,6 @@
 					?>
 				</div>
 			</div>
-		</div>
+		</div>		
 	</body>
 </html>
