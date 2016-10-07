@@ -70,7 +70,7 @@
 							<?php
 							echo '<h1> Bienvenue à '.$meteo['city']['name'].' '.$meteo['city']['country'].'</h1>
 							<p> Nous sommes le '. Date('d-m-Y') .' </p>
-							<p> Il est '.Date('H').'h '.Date('i').'m '.Date('s').'s </p>';
+							<p> Il est '.Date('H').' heure et '.Date('i').' minutes </p>';
 							?>
 						</div>
 					</div>
