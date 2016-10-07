@@ -24,41 +24,12 @@ body {
 #top h1{
     margin-top: 5px;
 }
-.tuile1{
+.tuile{
     padding-top: 20px;
     min-height: 25vh;
     border-radius: 10px;
-    background-color: rgba(255,255,0,0.6);
+    background-color: rgba(0,0,0,0.6);
 }
-
-.tuile2{
-    padding-top: 20px;
-    min-height: 25vh;
-    border-radius: 10px;
-    background-color: rgba(255,0,51,0.6);
-}
-
-.tuile3{
-    padding-top: 20px;
-    min-height: 25vh;
-    border-radius: 10px;
-    background-color: rgba(51,0,255,0.6);
-}
-
-.tuile4{
-    padding-top: 20px;
-    min-height: 25vh;
-    border-radius: 10px;
-    background-color: rgba(0,153,0,0.6);
-}
-
-.tuile5{
-    padding-top: 20px;
-    min-height: 25vh;
-    border-radius: 10px;
-    background-color: rgba(255,255,255,0.6);
-}
-
 .iconTop{
     font-size: 4.5vw;
 }

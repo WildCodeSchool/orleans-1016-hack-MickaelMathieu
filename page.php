@@ -66,7 +66,7 @@
 			<div class="row">
 				<div class="col-xs-12  col-lg-4">
 					<div class="meteo text-center">
-						<div class="tuile1">
+						<div class="tuile">
 							<?php
 							echo '<h1> Bienvenue à '.$meteo['city']['name'].' '.$meteo['city']['country'].'</h1>
 							<p> Nous sommes le '. Date('d-m-Y') .' </p>
@@ -77,7 +77,7 @@
 				</div>
 				<div class="col-xs-12  col-lg-8">
 					<div class="meteo text-center">
-						<div id="top" class="tuile2">
+						<div id="top" class="tuile">
 							<h1>Conditions Actuelles</h1>
 							<div class="col-lg-3">
 								<?php
@@ -111,7 +111,7 @@
 				<div class="col-xs-12  col-lg-4">
 					<div class="wrapCol col-xs-12  col-lg-12">
 						<div class="meteo text-center">
-							<div class="tuile3">
+							<div class="tuile">
 								<?php
 								echo '
 								<h1>Les conditions pour demain</h1>
@@ -127,7 +127,7 @@
 					</div>
 					<div class="wrapCol col-xs-12  col-lg-12">
 						<div class="meteo text-center">
-							<div class="tuile4">
+							<div class="tuile">
 								<div class="player text-center">
 									<?php
 										if ($meteo['list'][0]['weather'][0]['main'] == 'Clear'){
@@ -174,7 +174,7 @@
 				</div>
 				<div class="col-xs-12 col-lg-8">
 					<div class="mapTuile text-center">
-						<div class="tuile5">
+						<div class="tuile">
 							<?php
 								$http = 'https://maps.darksky.net/@precipitation_rate,'. $meteo['city']['coord']['lat'].','.$meteo['city']['coord']['lon'].',4';
 								echo '<iframe class="map" src="'.$http.'" frameborder="0"></iframe>';
