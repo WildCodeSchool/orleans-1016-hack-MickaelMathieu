@@ -30,7 +30,7 @@
 					<form method="POST" action="page.php">
 						<label class="titleSearch" for="search">WeatherMood Search!</label>
 						<div class="input-group">
-							<input class="form-control" type="text" name="search" id="search" placeholder="Entrez une ville,Pays si besoin">
+							<input class="form-control" type="text" name="search" id="search" placeholder="City, Country if you need">
 							<span class="input-group-btn">
         						<input type="submit" class="btn btn-primary" name="submit" id="submit" value="GO!">
       						</span>
