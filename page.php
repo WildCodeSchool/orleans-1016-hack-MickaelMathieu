@@ -82,7 +82,7 @@
 							<div class="col-lg-3">
 								<?php
 								echo '<h3>Temps '.$conditions[$meteo['list'][0]['weather'][0]['main']].'</h3>
-									<i class="iconTop wi wi-night-sleet"></i>';
+									<i class="iconTop wi '.$icons[$meteo['list'][6]['weather'][0]['icon']].'"></i>';
 								?>
 							</div>
 							<div class="col-lg-3">
