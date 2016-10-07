@@ -28,7 +28,10 @@
 						<source src="image/sky.mp4" type="video/mp4">
 					</video>
 					<form method="POST" action="page.php">
-						<label class="titleSearch" for="search">WeatherMood Search!</label>
+						<label class="titleSearch" for="search">
+							WeatherMood Search!
+							<h3>Find what you want</h3>
+						</label>
 						<div class="input-group">
 							<input class="form-control" type="text" name="search" id="search" placeholder="City, Country if you need">
 							<span class="input-group-btn">
