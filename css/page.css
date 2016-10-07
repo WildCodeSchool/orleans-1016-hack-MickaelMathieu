@@ -4,23 +4,45 @@ body {
 }
 
 .meteo {
-    margin-top: 10px;
+    margin-top: 20px;
     font-family: 'Indie Flower', cursive;
     font-size: 200%;
     font-weight: bold;
+    color: white;
 }
-
-.music {
-    margin-top: 10px;
+.mapTuile{
+    margin-top: 20px;
+}
+.player {
+    padding-top: 31px;
+    padding-bottom: 31px;
+}
+.music{
+    border-radius: 10px;
+    max-height: 400px;
+}
+.titleTuile{
+    /*margin-bottom: 20px;*/
 }
 .tuile{
-    height: 300px;
+    padding-top: 20px;
+    min-height: 200px;
     border-radius: 10px;
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(0,0,0,0.6);
+}
+.wrapCol{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.map{
+    width: 60vw;
+    height: 70.5vh;
+    padding-bottom: 15px;
+    border-radius: 10px;
 }
 .requestDate{
     margin-right: 20px;
-    margin-top: 50px;
+    margin-top: 10px;
     font-size: 60%;
     float:right;
     /*position: bottom;*/
