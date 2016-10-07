@@ -7,7 +7,6 @@ body {
     margin-top: 20px;
     font-family: 'Indie Flower', cursive;
     font-size: 200%;
-    font-weight: bold;
     color: white;
 }
 .mapTuile{
@@ -19,16 +18,26 @@ body {
 }
 .music{
     border-radius: 10px;
-    max-height: 400px;
+    width: 25vw;
+    height: 36.9vh;
 }
-.titleTuile{
-    /*margin-bottom: 20px;*/
+#top h1{
+    margin-top: 5px;
 }
 .tuile{
     padding-top: 20px;
-    min-height: 200px;
+    min-height: 25vh;
     border-radius: 10px;
     background-color: rgba(0,0,0,0.6);
+}
+.iconTop{
+    font-size: 80px;
+}
+.iconSide{
+    font-size: 20px;
+}
+li {
+    list-style: none;
 }
 .wrapCol{
     padding-left: 0 !important;
@@ -36,8 +45,9 @@ body {
 }
 .map{
     width: 60vw;
-    height: 70.5vh;
-    padding-bottom: 15px;
+    height: 73.5vh;
+    padding-top: 20px;
+    padding-bottom: 20px;
     border-radius: 10px;
 }
 .requestDate{

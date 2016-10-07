@@ -10,12 +10,18 @@
 
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		
+		<!-- Jquery JS-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 		<!-- CSS PERSO-->
 		<link rel="stylesheet" href="css/page.css">
+		
+		<!-- WEATHER ICONS -->
+		<link rel="stylesheet" href="weather-icons-master/css/weather-icons.min.css">
 
 		<!-- FONT PERSO -->
 		<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
@@ -35,6 +41,25 @@
 						//var_dump($meteo);
 						//Answer from openweathermap
 						$conditions=['Clear'=>'Dégagé','Rain'=>'Pluvieux','Snow'=>'Neigeux','Clouds'=>'Nuageux','Thunderstorm'=>'Orageux','Drizzle'=>'Bruineux','Atmosphere'=>'Brumeux'];
+						$icons=['01d'=>'wi-day-sunny',
+								'02d'=>'wi-day-cloudy',
+								'03d'=>'wi-cloud',
+								'04d'=>'wi-cloudy',
+								'09d'=>'wi-rain',
+								'10d'=>'wi-day-showers',
+								'11d'=>'wi-thunderstorm',
+								'13d'=>'wi-snow',
+								'50d'=>'wi-fog',
+								'01n'=>'wi-night-clear',
+								'02n'=>'wi-night-alt-cloudy',
+								'03n'=>'wi-cloud',
+								'04n'=>'wi-cloudy',
+								'09n'=>'wi-rain',
+								'10n'=>'wi-night-alt-showers',
+								'11n'=>'wi-thunderstorm',
+								'13n'=>'wi-snow',
+								'50n'=>'wi-fog',
+								];
 					}
 				}
 			?>
@@ -43,7 +68,7 @@
 					<div class="meteo text-center">
 						<div class="tuile">
 							<?php
-							echo '<h1 class="titleTuile"> Bienvenue à '.$meteo['city']['name'].' '.$meteo['city']['country'].'</h1>
+							echo '<h1> Bienvenue à '.$meteo['city']['name'].' '.$meteo['city']['country'].'</h1>
 							<p> Nous sommes le '. Date('d-m-Y') .' </p>
 							<p> Il est '.Date('H').'h '.Date('i').'m '.Date('s').'s </p>';
 							?>
@@ -52,10 +77,32 @@
 				</div>
 				<div class="col-xs-12  col-lg-8">
 					<div class="meteo text-center">
-						<div class="tuile">
-							<?php
-							echo '<h1 class="titleTuile"> Bienvenue à '.$meteo['city']['name'].' '.$meteo['city']['country'].'</h1>';
-							?>
+						<div id="top" class="tuile">
+							<h1>Conditions Actuelles</h1>
+							<div class="col-lg-3">
+								<?php
+								echo '<h3>Temps '.$conditions[$meteo['list'][0]['weather'][0]['main']].'</h3>
+									<i class="iconTop wi wi-night-sleet"></i>';
+								?>
+							</div>
+							<div class="col-lg-3">
+								<?php
+								echo '<h3>Température '.$meteo['list'][0]['main']['temp'].' °C</h3>
+									<i class="iconTop wi wi-thermometer"></i>';
+								?>
+							</div>
+							<div class="col-lg-3">
+								<?php
+								echo '<h3>Humidité '.$meteo['list'][0]['main']['humidity'].' %</h3>
+									<i class="iconTop wi wi-humidity"></i>';
+								?>
+							</div>
+							<div class="col-lg-3">
+								<?php
+								echo '<h3>Vent '.$meteo['list'][0]['wind']['speed'].' km/h</h3>
+									<i class="iconTop wi wi-strong-wind"></i>';
+								?>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -66,9 +113,14 @@
 						<div class="meteo text-center">
 							<div class="tuile">
 								<?php
-								echo '<p>Le temps est : '.$conditions[$meteo['list'][0]['weather'][0]['main']].' <img src=http://openweathermap.org/img/w/'.$meteo['list'][0]['weather'][0]['icon'].'.png></p>
-									<p>La température est de : ' .$meteo['list'][0]['main']['temp'].' °C </p>
-									<p> Vitesse du vent : '.$meteo['list'][0]['wind']['speed'].' km/h </p>';
+								echo '
+								<h1>Les conditions pour demain</h1>
+								<ul>
+									<li><i class="wi '.$icons[$meteo['list'][6]['weather'][0]['icon']].'"></i> '.$conditions[$meteo['list'][6]['weather'][0]['main']].' </li>
+									<li><i class="iconSide wi wi-thermometer"></i> ' .$meteo['list'][6]['main']['temp'].' °C </li>
+									<li><i class="iconSide wi wi-humidity"></i> '.$meteo['list'][6]['main']['humidity'].' % </li>
+									<li><i class="iconSide wi wi-strong-wind"></i> '.$meteo['list'][6]['wind']['speed'].' km/h </li>
+								</ul>';
 								?>
 							</div>
 						</div>
@@ -129,11 +181,6 @@
 							?>
 						</div>
 					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12 col-lg-offset-3 col-lg-6">
-					
 				</div>
 			</div>
 		</div>
