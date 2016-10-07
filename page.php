@@ -85,13 +85,13 @@
 					<div class="meteo text-center">
 						<div id="top" class="tuile">
 							<h1>Conditions Actuelles</h1>
-							<div class="col-lg-3">
+							<div class="col-lg-3 hover">
 								<?php
 								echo '<h3>Temps '.$conditions[$meteo['list'][0]['weather'][0]['main']].'</h3>
 									<i class="iconTop wi '.$icons[$meteo['list'][0]['weather'][0]['icon']].'"></i>';
 								?>
 							</div>
-							<div class="col-lg-3">
+							<div class="col-lg-3 hover">
 								<?php
 								echo '<h3>Température '.$meteo['list'][0]['main']['temp'].' °C</h3>'
 								?>
@@ -104,13 +104,13 @@
 									}	
 								?>
 							</div>
-							<div class="col-lg-3">
+							<div class="col-lg-3 hover">
 								<?php
 								echo '<h3>Humidité '.$meteo['list'][0]['main']['humidity'].' %</h3>
 									<i class="iconTop wi wi-humidity"></i>';
 								?>
 							</div>
-							<div class="col-lg-3">
+							<div class="col-lg-3 hover">
 								<?php
 								echo '<h3>Vent '.$meteo['list'][0]['wind']['speed'].' km/h</h3>
 									<i class="iconTop wi wi-strong-wind"></i>';
@@ -129,10 +129,10 @@
 								echo '
 								<h1>Les conditions pour demain</h1>
 								<ul>
-									<li><i class="wi '.$icons[$meteo['list'][6]['weather'][0]['icon']].'"></i> '.$conditions[$meteo['list'][6]['weather'][0]['main']].' </li>
-									<li><i class="iconSide wi wi-thermometer"></i> ' .$meteo['list'][6]['main']['temp'].' °C </li>
-									<li><i class="iconSide wi wi-humidity"></i> '.$meteo['list'][6]['main']['humidity'].' % </li>
-									<li><i class="iconSide wi wi-strong-wind"></i> '.$meteo['list'][6]['wind']['speed'].' km/h </li>
+									<li class="hover"><i class="wi '.$icons[$meteo['list'][6]['weather'][0]['icon']].'"></i> '.$conditions[$meteo['list'][6]['weather'][0]['main']].' </li>
+									<li class="hover"><i class="iconSide wi wi-thermometer"></i> ' .$meteo['list'][6]['main']['temp'].' °C </li>
+									<li class="hover"><i class="iconSide wi wi-humidity"></i> '.$meteo['list'][6]['main']['humidity'].' % </li>
+									<li class="hover"><i class="iconSide wi wi-strong-wind"></i> '.$meteo['list'][6]['wind']['speed'].' km/h </li>
 								</ul>';
 								?>
 							</div>
