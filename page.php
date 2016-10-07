@@ -69,9 +69,9 @@
 						<div class="tuile">
 							<?php
 							echo '<h1> Bienvenue à '.$meteo['city']['name'].' '.$meteo['city']['country'].'</h1>
-							<p> Nous sommes le '. Date('d-m-Y') .' </p>
-							<p><span class="queryDate"> Dernière mise à jour à : '.Date('H').' heure et '.Date('i').' minutes </span></p>
-							<a href="index.php">Return</a>';
+							<p> Nous sommes le '. Date('d-m-Y') .'<br/>
+							<span class="queryDate"> Dernière mise à jour à : '.Date('H').' heure et '.Date('i').' minutes </span></p><br/>
+							<a id="returnLink" href="index.php">Retour</a>';
 							?>
 						</div>
 					</div>
