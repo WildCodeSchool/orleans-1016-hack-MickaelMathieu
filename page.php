@@ -32,11 +32,15 @@
 			<?php
 				if (isset($_POST['submit'])){
 					if (empty($_POST['search'])){
-						echo '<br/> Vous n\'avez pas entré le nom d\'une ville dans le champ';
+						header('Location: index.php?msg=null');
 					} else {
 						$post = trim(htmlentities(str_replace(' ', '',ucfirst($_POST['search']))));
 						//Send http request to openweathermap
 						$jsonMeteo = file_get_contents('http://api.openweathermap.org/data/2.5/forecast/city?q='.$post.'&APPID=244bbac7d5d04ef80d28de1271d7cf1a&units=metric&lang=fr');
+						//var_dump($jsonMeteo);
+						if ($jsonMeteo == false){
+							header("Location: index.php?msg=badCity&value=$post");
+						} else {
 						$meteo = json_decode($jsonMeteo,true);
 						//var_dump($meteo);
 						//Answer from openweathermap
@@ -60,6 +64,7 @@
 								'13n'=>'wi-snow',
 								'50n'=>'wi-fog',
 								];
+						}
 					}
 				}
 			?>
@@ -83,7 +88,7 @@
 							<div class="col-lg-3">
 								<?php
 								echo '<h3>Temps '.$conditions[$meteo['list'][0]['weather'][0]['main']].'</h3>
-									<i class="iconTop wi '.$icons[$meteo['list'][6]['weather'][0]['icon']].'"></i>';
+									<i class="iconTop wi '.$icons[$meteo['list'][0]['weather'][0]['icon']].'"></i>';
 								?>
 							</div>
 							<div class="col-lg-3">

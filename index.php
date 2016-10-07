@@ -39,6 +39,15 @@
       						</span>
 						</div>
 					</form>
+					<?php
+						if (isset($_GET['msg']) and !empty($_GET['msg'])){
+							if ($_GET['msg'] == 'badCity'){
+								echo '<h1>Aucun résultat pour la ville '.$_GET['value'].'</h1>';
+							} else if ($_GET['msg'] == 'null'){
+								echo '<h1>Vous n\'avez rien rentré dans le champ</h1>';
+							}
+						}
+					?>
 				</div>
 			</div>
 		</div>
