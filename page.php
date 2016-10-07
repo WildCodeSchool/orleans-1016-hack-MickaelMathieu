@@ -88,8 +88,15 @@
 							</div>
 							<div class="col-lg-3">
 								<?php
-								echo '<h3>Température '.$meteo['list'][0]['main']['temp'].' °C</h3>
-									<i class="iconTop wi wi-thermometer"></i>';
+								echo '<h3>Température '.$meteo['list'][0]['main']['temp'].' °C</h3>'
+								?>
+								<?php
+									if ($meteo['list'][0]['main']['temp'] < 10) {
+										echo '<i class="iconTop wi wi-thermometer-exterior"></i>';
+									}
+									else {
+										echo '<i class="iconTop wi wi-thermometer"></i>';
+									}	
 								?>
 							</div>
 							<div class="col-lg-3">
